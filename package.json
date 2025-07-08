@@ -2,6 +2,9 @@
 	"name": "debugcorators",
 	"displayName": "debugCorators",
 	"description": "",
+	"repository": {
+		"url": "https://github.com/RodrigoScola/debugcorators"
+	},
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.101.0"

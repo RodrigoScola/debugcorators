@@ -30,7 +30,7 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 async function runDiagnostics(diagnosticCollection: vscode.DiagnosticCollection, doc?: vscode.TextDocument) {
-	const filesToCheck = doc ? [doc.uri] : await vscode.workspace.findFiles('**/*.ts');
+	const filesToCheck = doc ? [doc.uri] : await vscode.workspace.findFiles('**/*.ts', '**/node_modules/**');
 
 	for (const file of filesToCheck) {
 		const document =
