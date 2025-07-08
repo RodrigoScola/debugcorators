@@ -61,10 +61,6 @@ async function runDiagnostics(diagnosticCollection: vscode.DiagnosticCollection,
 	}
 }
 
-/**
- * @throws
- */
-// Finds all functions or methods with @throws decorator or JSDoc tag, returning name and range
 function findCallsToThrowsFunctionsOutsideTry(sourceCode: string): FunctionInfo[] {
 	const sourceFile = ts.createSourceFile('temp.ts', sourceCode, ts.ScriptTarget.Latest, true);
 	const throwsFunctions = new Map<
